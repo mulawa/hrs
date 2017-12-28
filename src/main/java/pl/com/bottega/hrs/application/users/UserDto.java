@@ -1,0 +1,39 @@
+package pl.com.bottega.hrs.application.users;
+
+import java.util.Set;
+
+public class UserDto {
+
+    private Integer id;
+    private String login;
+    private Set<Role> roles;
+
+    public UserDto(User user){
+        id = user.getId();
+        login = user.getLogin();
+        roles = user.getRoles();
+    }
+    public Integer getId() {
+        return id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+}
